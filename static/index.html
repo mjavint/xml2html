@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xml2html</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css"/>
+</head>
+<body>
+    <div id="bookForm">
+        <input id="books" type="file" onChange="loadDoc(event)">
+        <label for="books">Cargar archivo</label>
+      </div>
+      
+      <table id="bookTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Agencia</th>
+            <th>AG_Origen</th>
+            <th>DPA</th>
+            <th>DPA_Origen</th>
+            <th>Fecha_EC</th>
+            <th>Fecha_Pago</th>
+            <th>Importe</th>
+            <th>Referencia</th>
+            <th>Referencia_Origen</th>
+            <th>Codigo_Barra</th>
+            <th>NIT</th>
+            <th>Impuesto</th>
+            <th>Periodo</th>
+            <th>Contribuyente</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <td colspan="4" style="text-align: center">Sin registros</td>
+          </tr>
+        </tbody>
+      </table>
+      <script src="/static/utils.js" language="javascript" type="text/javascript"></script>
+</body>
+</html>
