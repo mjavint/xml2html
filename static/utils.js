@@ -28,9 +28,9 @@ function loadDoc(e) {
   }
   
   function showDocInTable(xml) {
-    const table = document.querySelector('#bookTable > tbody')
-    const datasource = xml.querySelector('bookstore')
-    const books = datasource.querySelectorAll('book')
+    const table = document.querySelector('#pagosTable > tbody')
+    const datasource = xml.querySelector('Pagos')
+    const books = datasource.querySelectorAll('Pago')
   
     table.removeChild(table.children[0])
   
@@ -52,7 +52,17 @@ function loadDoc(e) {
       const periodo = tagToData(book.querySelector('Periodo'))
       const contribuyente = tagToData(book.querySelector('Contribuyente'))
   
-      tr.append(id, agencia, ag_origen, dpa, dpa_origen, fecha_ec, fecha_pago, importe, referencia, Referencia_Origen, codigo_barra, nit, impuesto, periodo, contribuyente
+      tr.append(id, agencia, ag_origen, dpa, dpa_origen, fecha_ec, fecha_pago, importe, referencia, Referencia_Origen, codigo_barra, nit, impuesto, periodo, contribuyente)
       table.appendChild(tr)
     })
+  }
+
+  function tagToData(tag) {
+    const td = document.createElement('td')
+    td.textContent = tag.textContent
+    return td
+  }
+  
+  function onError(reason) {
+    console.error(reason)
   }
